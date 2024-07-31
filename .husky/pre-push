@@ -1,0 +1,25 @@
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+changed_files=$(git diff --name-only HEAD HEAD~ -- '*.ts' '*.js')
+
+if [ -n "$changed_files" ]; then
+  echo "${BLUE}The following TS/JS files have been changed:${NC}"
+  echo "$changed_files"
+
+  # TODO: In the future, add Jest testing here
+  # When ready, uncomment the lines below to run Jest tests for changed files
+  #
+  # echo "${BLUE}Running tests for changed files...${NC}"
+  # yarn test --bail --findRelatedTests $changed_files
+  #
+  # if [ $? -ne 0 ]; then
+  #   echo "${RED}Tests failed. Aborting push.${NC}"
+  #   exit 1
+  # fi
+
+  echo "${GREEN}Skipping tests as per current configuration.${NC}"
+else
+  echo "${GREEN}No TS/JS files have been changed. Proceeding with push.${NC}"
+fi

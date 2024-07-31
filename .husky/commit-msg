@@ -1,0 +1,16 @@
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat $COMMIT_MSG_FILE)
+
+REGEX="^(feat|bugfix|hotfix|release|merge):\s.+$"
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+echo "Commit message: ${GREEN}$COMMIT_MSG${NC}"
+
+if ! echo "$COMMIT_MSG" | grep -qE "$REGEX"; then
+  echo "${RED}Your commit message was rejected due to incorrect format."
+  echo "Please use the format 'feat: <message>' or similar for other types (bugfix, hotfix, release, merge).${NC}"
+  exit 1
+fi
