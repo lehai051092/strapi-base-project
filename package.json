@@ -8,14 +8,23 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "deploy": "strapi deploy"
+    "deploy": "strapi deploy",
+    "lint": "eslint --fix 'src/**/*.{js,ts}'",
+    "format": "prettier --write 'src/**/*.{js,ts,json,md}'"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
+  },
   "dependencies": {
-    "@strapi/strapi": "4.25.5",
-    "@strapi/plugin-users-permissions": "4.25.5",
-    "@strapi/plugin-i18n": "4.25.5",
     "@strapi/plugin-cloud": "4.25.5",
+    "@strapi/plugin-i18n": "4.25.5",
+    "@strapi/plugin-users-permissions": "4.25.5",
+    "@strapi/strapi": "4.25.5",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
