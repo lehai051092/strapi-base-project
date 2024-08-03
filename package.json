@@ -24,6 +24,7 @@
     "prettier": "^3.3.3"
   },
   "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.13",
     "@strapi/plugin-cloud": "4.25.5",
     "@strapi/plugin-i18n": "4.25.5",
     "@strapi/plugin-users-permissions": "4.25.5",
@@ -35,7 +36,7 @@
     "styled-components": "5.3.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "HaiLT"
   },
   "strapi": {
     "uuid": "58fb10cd-4bc4-421c-aa59-d72f62562421"

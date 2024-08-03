@@ -10,14 +10,10 @@
 
 ## Features
 
-- [ ] Database. Support [TypeORM](https://www.npmjs.com/package/typeorm)
-- [ ] Seeding.
 - [ ] Mailing ([nodemailer](https://www.npmjs.com/package/nodemailer)).
 - [ ] Sign in and sign up via email.
 - [ ] Social sign in (Apple, Facebook, Google, Twitter).
 - [ ] Admin and User roles.
-- [ ] Pagination: Offset and Cursor (Clone from [typeorm-cursor-pagination](https://github.com/benjamin658/typeorm-cursor-pagination) and add more features).
-- [ ] Internationalization/Translations (I18N) ([nestjs-i18n](https://www.npmjs.com/package/nestjs-i18n)).
 - [ ] File uploads. Support local and Amazon S3 drivers.
 - [ ] Swagger.
 - [ ] E2E and units tests.
