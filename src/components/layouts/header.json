@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layouts_headers",
+  "info": {
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.image"
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.menus"
+    },
+    "actions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.actions"
+    }
+  }
+}

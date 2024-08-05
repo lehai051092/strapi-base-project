@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_common_actions",
+  "info": {
+    "displayName": "action",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "src": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}
