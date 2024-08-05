@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-08-05T15:16:43.951Z"
+    "x-generation-date": "2024-08-05T15:49:38.909Z"
   },
   "x-strapi-config": {
     "plugins": ["upload", "users-permissions"],
@@ -97,9 +97,6 @@
               "slug": {
                 "type": "string"
               },
-              "description": {
-                "type": "string"
-              },
               "image": {
                 "oneOf": [
                   {
@@ -135,6 +132,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "description": {
+                "type": "string"
               }
             }
           }
@@ -196,9 +196,6 @@
             "type": "boolean"
           },
           "slug": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "image": {
@@ -844,9 +841,6 @@
                       "slug": {
                         "type": "string"
                       },
-                      "description": {
-                        "type": "string"
-                      },
                       "image": {
                         "type": "object",
                         "properties": {
@@ -1023,6 +1017,9 @@
                           }
                         }
                       },
+                      "description": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -1094,6 +1091,9 @@
                 }
               }
             }
+          },
+          "description": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -1174,6 +1174,9 @@
             "properties": {
               "header": {
                 "$ref": "#/components/schemas/LayoutsHeaderComponent"
+              },
+              "footer": {
+                "$ref": "#/components/schemas/LayoutsFooterComponent"
               }
             }
           }
@@ -1230,6 +1233,9 @@
         "properties": {
           "header": {
             "$ref": "#/components/schemas/LayoutsHeaderComponent"
+          },
+          "footer": {
+            "$ref": "#/components/schemas/LayoutsFooterComponent"
           },
           "createdAt": {
             "type": "string",
@@ -1324,6 +1330,9 @@
               },
               "height": {
                 "type": "string"
+              },
+              "description": {
+                "type": "string"
               }
             }
           },
@@ -1354,9 +1363,6 @@
                               "type": "boolean"
                             },
                             "slug": {
-                              "type": "string"
-                            },
-                            "description": {
                               "type": "string"
                             },
                             "image": {
@@ -2018,6 +2024,9 @@
                                 }
                               }
                             },
+                            "description": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -2084,11 +2093,85 @@
                 "src": {
                   "type": "string"
                 },
-                "text": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
                   "type": "string"
                 }
               }
             }
+          }
+        }
+      },
+      "LayoutsFooterComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "logo": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "src": {
+                "type": "string"
+              },
+              "alt": {
+                "type": "string"
+              },
+              "width": {
+                "type": "string"
+              },
+              "height": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          "work_time": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "src": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          "quick_links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "src": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "copyright": {
+            "type": "string"
           }
         }
       },

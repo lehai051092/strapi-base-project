@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_layouts_footers",
+  "info": {
+    "displayName": "footer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.image"
+    },
+    "work_time": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.actions"
+    },
+    "quick_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.actions"
+    },
+    "copyright": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

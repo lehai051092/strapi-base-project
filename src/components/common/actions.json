@@ -9,8 +9,16 @@
     "src": {
       "type": "string"
     },
-    "text": {
+    "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

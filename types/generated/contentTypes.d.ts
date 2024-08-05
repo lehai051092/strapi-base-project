@@ -318,10 +318,17 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     name: Attribute.String;
     is_active: Attribute.Boolean & Attribute.DefaultTo<false>;
     slug: Attribute.UID<'api::category.category', 'name'>;
-    description: Attribute.RichText;
     image: Attribute.Media<'images'>;
     parent: Attribute.Relation<'api::category.category', 'manyToOne', 'api::category.category'>;
     children: Attribute.Relation<'api::category.category', 'oneToMany', 'api::category.category'>;
+    description: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -345,6 +352,7 @@ export interface ApiCommonCommon extends Schema.SingleType {
   };
   attributes: {
     header: Attribute.Component<'layouts.header'>;
+    footer: Attribute.Component<'layouts.footer'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
