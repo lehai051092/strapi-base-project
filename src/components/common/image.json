@@ -20,6 +20,9 @@
     },
     "description": {
       "type": "text"
+    },
+    "link": {
+      "type": "text"
     }
   }
 }

@@ -57,6 +57,7 @@ export interface CommonImage extends Schema.Component {
     width: Attribute.String;
     height: Attribute.String;
     description: Attribute.Text;
+    link: Attribute.Text;
   };
 }
 
@@ -80,6 +81,31 @@ export interface CommonActions extends Schema.Component {
   };
 }
 
+export interface BlocksHeroSection extends Schema.Component {
+  collectionName: 'components_blocks_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images'>;
+    heading: Attribute.String;
+    subHeading: Attribute.String;
+    link: Attribute.Component<'common.actions'>;
+  };
+}
+
+export interface BlocksAssociationWith extends Schema.Component {
+  collectionName: 'components_blocks_association_withs';
+  info: {
+    displayName: 'Association With';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Component<'common.image', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -88,6 +114,8 @@ declare module '@strapi/types' {
       'components.menus': ComponentsMenus;
       'common.image': CommonImage;
       'common.actions': CommonActions;
+      'blocks.hero-section': BlocksHeroSection;
+      'blocks.association-with': BlocksAssociationWith;
     }
   }
 }

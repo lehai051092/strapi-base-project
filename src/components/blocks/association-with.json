@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_association_withs",
+  "info": {
+    "displayName": "Association With",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.image"
+    }
+  }
+}
